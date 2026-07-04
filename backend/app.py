@@ -12,14 +12,8 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 
-CORS(
-    app,
-    resources={r"/*": {"origins": [
-        "http://localhost:5173",
-        "https://task-manager-web-app-pink.vercel.app"
-    ]}},
-    supports_credentials=True
-)
+CORS(app)
+
 db.init_app(app)
 bcrypt = Bcrypt(app)
 
