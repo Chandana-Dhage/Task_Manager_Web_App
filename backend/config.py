@@ -20,5 +20,9 @@ class Config:
         f"@{DB_HOST}:{DB_PORT}/{DB_NAME}"
         "?ssl_verify_cert=false"
     )
-
+    SQLALCHEMY_ENGINE_OPTIONS = {
+    "connect_args": {
+        "ssl": {}
+    }
+}
     SQLALCHEMY_TRACK_MODIFICATIONS = False
