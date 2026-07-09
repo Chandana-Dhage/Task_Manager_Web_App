@@ -14,7 +14,12 @@ app.config.from_object(Config)
 
 CORS(
     app,
-    resources={r"/api/*": {"origins": "*"}},
+    resources={r"/api/*": {
+        "origins": [
+            "http://localhost:5173",
+            "https://task-manager-web-app-pink.vercel.app"
+        ]
+    }},
     supports_credentials=True
 )
 
