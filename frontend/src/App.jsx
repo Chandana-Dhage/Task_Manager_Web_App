@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
-
+console.log(import.meta.env.VITE_API_URL);
   return (
     <>
     <Routes>
